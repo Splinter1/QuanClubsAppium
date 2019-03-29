@@ -17,6 +17,7 @@ public class RegisterPage {
 
     private AndroidDriver driver;
     private  String phone = RandomNum.randomPhone();
+    By userMboile = By.id("com.mingtimes.quanclubs:id/userMobile");
 
     @BeforeClass
     public void setup()throws Exception{
@@ -29,7 +30,7 @@ public class RegisterPage {
         //点击注册按钮
         Actions.click(By.id("com.mingtimes.quanclubs:id/goRegister"));
         //输入已存在的手机号
-        Actions.sendKeys(By.id("com.mingtimes.quanclubs:id/userMobile") , "15312200089");
+        Actions.sendKeys(userMboile , "15312200089");
         //点击发送验证码
         Actions.click(By.id("com.mingtimes.quanclubs:id/vaildCode"));
         //校验是否成功
@@ -43,7 +44,7 @@ public class RegisterPage {
     @Test
     public void bRegister()throws Exception{
         //输入正确手机号
-        Actions.sendKeys(By.id("com.mingtimes.quanclubs:id/userMobile") , phone);
+        Actions.sendKeys(userMboile , phone);
         Actions.sendKeys(By.id("com.mingtimes.quanclubs:id/userPazz") , "000000");
         Actions.sendKeys(By.id("com.mingtimes.quanclubs:id/userPazzRepeat") , "000000");
         Actions.sendKeys(By.id("com.mingtimes.quanclubs:id/userVCode") , "000000");
@@ -71,14 +72,14 @@ public class RegisterPage {
         Assert.assertEquals(a,"找回密码");
         //输入不存在的手机号码
         String newphone = RandomNum.randomPhone();
-        Actions.sendKeys(By.id("com.mingtimes.quanclubs:id/userMobile") , newphone);
+        Actions.sendKeys(userMboile , newphone);
         Actions.click(By.id("com.mingtimes.quanclubs:id/vaildCode"));
         try{
             getText(By.xpath("//*[contains(@text,'手机号码不存在')]"));
         }catch (Exception e){
             throw new Exception("报错：手机号码不存在");
         }
-        Actions.sendKeys(By.id("com.mingtimes.quanclubs:id/userMobile") , phone);
+        Actions.sendKeys(userMboile , phone);
         Actions.sendKeys(By.id("com.mingtimes.quanclubs:id/userPazz") , "123456");
         Actions.sendKeys(By.id("com.mingtimes.quanclubs:id/userPazzRepeat") , "123456");
         Actions.sendKeys(By.id("com.mingtimes.quanclubs:id/userVCode") , "000000");
