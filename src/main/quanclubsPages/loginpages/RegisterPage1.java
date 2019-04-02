@@ -1,4 +1,4 @@
-package loginpage;
+package loginpages;
 
 import actions.Actions;
 import actions.AllowPermission;
@@ -13,7 +13,7 @@ import tools.RandomNum;
 
 import static actions.Actions.getText;
 
-public class RegisterPage {
+public class RegisterPage1 {
 
     private AndroidDriver driver;
     private  String phone = RandomNum.randomPhone();

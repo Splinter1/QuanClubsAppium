@@ -21,12 +21,12 @@ public class test {
         cap.setCapability("platformVersion", "8.0");
 
 //        //将上面获取到的包名和Activity名设置为值
-        cap.setCapability("appPackage", "com.mingtimes.loginpage");
-        cap.setCapability("appActivity", "com.mingtimes.loginpage.ui.guide.GuideActivity");
+        cap.setCapability("appPackage", "com.mingtimes.loginpages");
+        cap.setCapability("appActivity", "com.mingtimes.loginpages.ui.guide.GuideActivity");
 //        //cap.setCapability("automationName", "uiautomator2");
 //
 //        //A new session could not be created的解决方法
-        cap.setCapability("appWaitActivity","com.mingtimes.loginpage.ui.guide.GuideActivity");
+        cap.setCapability("appWaitActivity","com.mingtimes.loginpages.ui.guide.GuideActivity");
 //        //每次启动时覆盖session，否则第二次后运行会报错不能新建session
         cap.setCapability("sessionOverride", true);
 
@@ -50,13 +50,13 @@ public class test {
 
 
         //点击输入密码与账号
-        driver.findElementById("com.mingtimes.loginpage:id/passwordLogin").click();
+        driver.findElementById("com.mingtimes.loginpages:id/passwordLogin").click();
         //输入账号以及密码
-        driver.findElementById("com.mingtimes.loginpage:id/userMobile").sendKeys("15312200089");
+        driver.findElementById("com.mingtimes.loginpages:id/userMobile").sendKeys("15312200089");
         //输入密码
-        driver.findElementById("com.mingtimes.loginpage:id/userPazz").sendKeys("123456");
+        driver.findElementById("com.mingtimes.loginpages:id/userPazz").sendKeys("123456");
         //获取=
-        driver.findElementById("com.mingtimes.loginpage:id/btnLogin").click();
+        driver.findElementById("com.mingtimes.loginpages:id/btnLogin").click();
 
 
     }

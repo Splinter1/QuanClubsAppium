@@ -26,18 +26,18 @@ public class testFrame {
     @Test
     public void b1register() throws Exception {
         //点击注册按钮
-        Actions.click(By.id("com.mingtimes.loginpage:id/goRegister"));
+        Actions.click(By.id("com.mingtimes.loginpages:id/goRegister"));
         //输入手机号、密码验证码
-        Actions.sendKeys(By.id("com.mingtimes.loginpage:id/userMobile") , phone);
-        Actions.sendKeys(By.id("com.mingtimes.loginpage:id/userPazz") , passwd);
-        Actions.sendKeys(By.id("com.mingtimes.loginpage:id/userPazzRepeat") , passwd);
-        Actions.sendKeys(By.id("com.mingtimes.loginpage:id/userVCode") , "000000");
+        Actions.sendKeys(By.id("com.mingtimes.loginpages:id/userMobile") , phone);
+        Actions.sendKeys(By.id("com.mingtimes.loginpages:id/userPazz") , passwd);
+        Actions.sendKeys(By.id("com.mingtimes.loginpages:id/userPazzRepeat") , passwd);
+        Actions.sendKeys(By.id("com.mingtimes.loginpages:id/userVCode") , "000000");
         //点击发送验证码
-        Actions.click(By.id("com.mingtimes.loginpage:id/vaildCode"));
+        Actions.click(By.id("com.mingtimes.loginpages:id/vaildCode"));
         //点击同意协议
-        Actions.click(By.id("com.mingtimes.loginpage:id/radioBtn"));
+        Actions.click(By.id("com.mingtimes.loginpages:id/radioBtn"));
         //点击注册
-        Actions.click(By.id("com.mingtimes.loginpage:id/btnRegister"));
+        Actions.click(By.id("com.mingtimes.loginpages:id/btnRegister"));
 
         //校验是否成功
         try{
@@ -53,9 +53,9 @@ public class testFrame {
 
     @Test
     public void c1login(){
-        Actions.sendKeys(By.id("com.mingtimes.loginpage:id/userMobile") , phone);
-        Actions.sendKeys(By.id("com.mingtimes.loginpage:id/userPazz") , passwd);
-        Actions.click(By.id("com.mingtimes.loginpage:id/btnLogin"));
+        Actions.sendKeys(By.id("com.mingtimes.loginpages:id/userMobile") , phone);
+        Actions.sendKeys(By.id("com.mingtimes.loginpages:id/userPazz") , passwd);
+        Actions.click(By.id("com.mingtimes.loginpages:id/btnLogin"));
     }
 
 
