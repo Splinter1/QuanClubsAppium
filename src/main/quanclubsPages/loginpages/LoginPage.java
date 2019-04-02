@@ -10,10 +10,16 @@ public class LoginPage {
     static By mobileText = By.id("com.mingtimes.quanclubs:id/userMobile");
     //密码输入框
     static By passwordText = By.id("com.mingtimes.quanclubs:id/userPazz");
+    //注册按钮
+    static By goRegisterButton = By.id("com.mingtimes.quanclubs:id/goRegister");
 
-
-    public static  void clickLogin(){
+    public static void clickLogin(){
         Actions.click(loginButten);
+        return;
+    }
+
+    public static void registerButton(){
+        Actions.click(goRegisterButton);
         return;
     }
 
