@@ -3,6 +3,7 @@ package loginpages;
 import actions.Actions;
 import actions.AllowPermission;
 import driver.AppDriver;
+import find.isHere;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -34,11 +35,19 @@ public class RegisterPage1 {
         //点击发送验证码
         Actions.click(By.id("com.mingtimes.quanclubs:id/vaildCode"));
         //校验是否成功
-        try{
-            getText(By.xpath("//*[contains(@text,'手机号码已存在')]"));
-        }catch (Exception e){
-            throw new Exception("未报错：手机号码已存在");
-        }
+//        try{
+//            getText(By.xpath("//*[contains(@text,'手机号码已存在')]"));
+//        }catch (Exception e){
+//            throw new Exception("未报错：手机号码已存在");
+//        }
+//        if(isHere.isElementExist(driver,By.xpath("//*[contains(@text,'手机号码已存在')]"))){
+//            System.out.println("未报错：手机号码已存在");
+//        }else{
+//            System.out.println("有问题");
+//        }
+        Assert.assertEquals(true,isHere.whereToast(driver,"手机号码已存在"));
+
+
     }
 
     @Test

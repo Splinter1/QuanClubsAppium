@@ -24,6 +24,8 @@ public class AppElementUtils extends AppDriver {
         return element;
     }
 
+
+
     public static List<WebElement> findElements (final By by){
 
         List<WebElement>  webElement = null;

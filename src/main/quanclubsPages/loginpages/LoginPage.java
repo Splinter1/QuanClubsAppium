@@ -12,6 +12,8 @@ public class LoginPage {
     static By passwordText = By.id("com.mingtimes.quanclubs:id/userPazz");
     //注册按钮
     static By goRegisterButton = By.id("com.mingtimes.quanclubs:id/goRegister");
+    //重置密码
+    static By resetPasswordButton = By.id("com.mingtimes.quanclubs:id/forgetPazz");
 
     public static void clickLogin(){
         Actions.click(loginButten);
@@ -20,6 +22,11 @@ public class LoginPage {
 
     public static void registerButton(){
         Actions.click(goRegisterButton);
+        return;
+    }
+
+    public static void resetpassword(){
+        Actions.click(resetPasswordButton);
         return;
     }
 
