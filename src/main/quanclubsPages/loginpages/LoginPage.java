@@ -33,6 +33,7 @@ public class LoginPage {
     public static void senduserinfo(String mobile,String password){
         Actions.sendKeys(mobileText , mobile);
         Actions.sendKeys(passwordText , password);
+        clickLogin();
         return;
     }
 }

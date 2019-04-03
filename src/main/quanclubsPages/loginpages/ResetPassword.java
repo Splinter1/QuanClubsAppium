@@ -31,8 +31,8 @@ public class ResetPassword {
         Actions.sendKeys(mobileText , mobile);
         Actions.sendKeys(passwordText , password);
         Actions.sendKeys(passwordTextagain , password);
-        Actions.sendKeys(VCode , VcodeNum);
         setVCodeButton();
+        Actions.sendKeys(VCode , VcodeNum);
         setOkButton();
     }
 

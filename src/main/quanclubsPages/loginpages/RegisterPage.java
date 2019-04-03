@@ -37,9 +37,9 @@ public class RegisterPage {
         Actions.sendKeys(mobileText , mobile);
         Actions.sendKeys(passwordText , password);
         Actions.sendKeys(passwordTextagain , password);
+        setVCodeButton();
         Actions.sendKeys(VCode , VcodeNum);
         setAgreeButton();
-        setVCodeButton();
         setRegisterButton();
     }
 

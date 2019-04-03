@@ -6,6 +6,7 @@ import find.isHere;
 import io.appium.java_client.android.AndroidDriver;
 import loginpages.LoginPage;
 import loginpages.RegisterPage;
+import loginpages.ResetPassword;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -46,7 +47,8 @@ public class allPages {
 
     @Test(priority = 3)
     public void forgetPassword(){
-        RegisterPage.registerUser(randomMobile,rightPassword);
+        LoginPage.resetpassword();
+        ResetPassword.reSet(randomMobile,rightPassword);
         Assert.assertEquals(true, isHere.whereToast(driver, "操作成功"));
     }
 
@@ -59,11 +61,6 @@ public class allPages {
     @Test(priority = 5)
     public void login2(){
         LoginPage.senduserinfo(randomMobile,rightPassword);
-        Assert.assertEquals(true, isHere.whereToast(driver, "登陆成功"));
+//        Assert.assertEquals(true, isHere.whereToast(driver, "登陆成功"));
     }
-
-
-
-
-
 }
