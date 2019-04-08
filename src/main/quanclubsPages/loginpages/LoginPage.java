@@ -17,23 +17,19 @@ public class LoginPage {
 
     public static void clickLogin(){
         Actions.click(loginButten);
-        return;
     }
 
     public static void registerButton(){
         Actions.click(goRegisterButton);
-        return;
     }
 
     public static void resetpassword(){
         Actions.click(resetPasswordButton);
-        return;
     }
 
     public static void senduserinfo(String mobile,String password){
         Actions.sendKeys(mobileText , mobile);
         Actions.sendKeys(passwordText , password);
         clickLogin();
-        return;
     }
 }

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Default Suite">
-  <test name="LoginPage">
+  <test name="LoginPage" preserve-order="true">
     <classes>
-      <class name="publish.allPages"/>
+      <class name="publish.drivers.StartUp"/>
+      <class name="publish.LoginPages"/>
     </classes>
   </test>
 
-  <test name="test">
+  <test name="LoginPage2" preserve-order="true">
     <classes>
-      <class name="publish.RegisterPage1"/>
+      <class name="publish.drivers.ShutDown"/>
     </classes>
   </test>
 </suite>

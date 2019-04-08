@@ -1,5 +1,3 @@
-package publish;
-
 import actions.Actions;
 import actions.AllowPermission;
 import driver.AppDriver;
